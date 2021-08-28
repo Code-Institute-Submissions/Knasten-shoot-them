@@ -58,11 +58,11 @@ p {
     border-radius: 50%;
     display: inline-block;
     margin: 2% 4% 3% 4%;
-    background-color: red;
+    background-color: black;
 }
 .active {
-    width: 3rem;
-    height: 3rem;
+    width: 3%;
+    height: 6.2%;
     border-radius: 50%;
     display: inline-block;
     margin: 2% 4% 3% 4%;
