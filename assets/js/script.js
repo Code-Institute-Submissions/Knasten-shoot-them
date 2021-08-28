@@ -2,7 +2,7 @@
  * Theese nested functions adds active class and removes target class.
  * And on timeout it removes active class and adds target class again.
  */
-let time = 1000
+let time = 950
 var startTime;
  function unMask() {
     let targetActive = document.getElementsByClassName("target")[Math.floor(Math.random()*40)]
@@ -14,7 +14,7 @@ var startTime;
             stopGame();
 }
 if (1){
-    return setTimeout(mask, time-50);
+    return setTimeout(mask, time);
 }
 }
 function mask (){
@@ -36,13 +36,15 @@ function mask (){
  * Calls startUnMask()
  */
 function startSetInterval() {
-    startUnMask(unMask, time);
+    startUnMask(unMask, 1000);
+    document.getElementById("score").innerHTML = 0
 }
 /**
  * Function to clearinterval and stop game from running.
 */
 function stopGame(){
     clearInterval(globalThis.delay)
+    clearTimeout
 }
 /**
  * Removes active class and makes it invisble again. And calls function,
@@ -53,7 +55,7 @@ function stopGame(){
     this.classList.remove("active")
     this.classList.add("target")
     scoreIncrement();
-    time = time-10
+    time = time-200
 }
 /**
  * Takes old score and adds 1 for each time onHit() is called.
