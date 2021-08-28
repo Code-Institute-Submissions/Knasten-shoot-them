@@ -2,6 +2,8 @@
  * Theese nested functions adds active class and removes target class.
  * And on timeout it removes active class and adds target class again.
  */
+let time = 1000
+var startTime;
  function unMask() {
     let targetActive = document.getElementsByClassName("target")[Math.floor(Math.random()*40)]
     if(targetActive.classList !== "active"){
@@ -11,6 +13,9 @@
         if (Date.now() - startTime > 60000){
             stopGame();
 }
+if (1){
+    return setTimeout(mask, time-50);
+}
 }
 function mask (){
     if(targetActive.classList !== "target"){
@@ -18,6 +23,21 @@ function mask (){
     targetActive.classList.add("target")
     targetActive.removeEventListener('click', onHit);
 }}}
+/**
+ * Sets interval on unMask() to start the game.
+ */
+ function startUnMask(func, interval) {
+    func();
+    globalThis.delay = setInterval(func, interval);
+    startTime = Date.now();
+}
+/**
+ * Is called upon clicking start button
+ * Calls startUnMask()
+ */
+function startSetInterval() {
+    startUnMask(unMask, time);
+}
 /**
  * Function to clearinterval and stop game from running.
 */
