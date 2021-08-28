@@ -81,7 +81,7 @@
     * CSS3 was used for styling the website.
     * JavaScript was used for the logic of my website.
 * I used [GitHub](https://github.com/) to deploy my website.
-* I used [FontAwesome Ver.5.15.4](https://fontawesome.com/) for the github icon at the bottom of the page.
+* I used [FontAwesome Ver.5.15.4](https://fontawesome.com/) for the github icon at the bottom of the page and the icon next to page name. (favicon)
 * I used [Stackoverflow](https://stackoverflow.com/) to read and learn more about java while writing this.
 * I also used [W3Schools](https://www.w3schools.com/) to read up about intervals and timeouts.
 * I used [Lighthouse](https://developers.google.com/web/tools/lighthouse) to evaluate my website. <br>
