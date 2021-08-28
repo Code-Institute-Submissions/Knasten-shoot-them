@@ -6,7 +6,7 @@
 
 # Shoot Them!
 
-* [LINK FOR LIVE VIEW](https://knasten.github.io/shoot-them/)
+<a href="https://knasten.github.io/shoot-them/" target="_blank" rel="noopener">Link To Website</a>
 
 # Content
 
@@ -65,11 +65,14 @@
 # Validation
 
 * HTML
-    * No Faults when runnning it through the WSC3 Validator.
-    * ![picture of WSC3 Validation of the HTML](./assets/readme-img/html-vali.jpg)
+    * No Faults when runnning it through the WSC3 Validator.<br>
+     ![picture of WSC3 Validation of the HTML](./assets/readme-img/html-vali.jpg)
 * CSS
-    * No Faults when runnning it through the Jigsaw Validator.
-    * ![picture of Jigsaw Validation of the CSS](./assets/readme-img/css-vali.jpg)
+    * No Faults when runnning it through the Jigsaw Validator.<br>
+     ![picture of Jigsaw Validation of the CSS](./assets/readme-img/css-vali.jpg)
+* JavaScript
+    * One error found which exist cause I call the function from within the HTML.<br>
+     ![picture of javascript validation](./assets/readme-img/js-vali.jpg)
 
 # Tools
 
@@ -81,6 +84,8 @@
 * I used [FontAwesome Ver.5.15.4](https://fontawesome.com/) for the github icon at the bottom of the page.
 * I used [Stackoverflow](https://stackoverflow.com/) to read and learn more about java while writing this.
 * I also used [W3Schools](https://www.w3schools.com/) to read up about intervals and timeouts.
+* I used [Lighthouse](https://developers.google.com/web/tools/lighthouse) to evaluate my website. <br>
+![picture of lighthouse report](./assets/readme-img/lighthouse.jpg)
 
 # Deployment
 

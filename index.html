@@ -7,6 +7,7 @@
     <meta name="description" content="Target pratice game">
     <meta name="keywords" content="target, pratice, game, target pratice, javascript game">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>Hit The Target!</title>
 </head>
 <body>
@@ -18,10 +19,10 @@
         <div id="game-area">
             <div id="controls">
                 <p id="controls-text">Player Score: <span id="score">0</span></p>
-                <button class="button" id="start" onclick="startSetInterval();">
+                <button aria-label="starts the game." class="button" id="start" onclick="startSetInterval();">
                     Start Game!
                 </button>
-                <button class="button" id="stop" onclick="stopGame();">Stop Game!</button>
+                <button aria-label="stops the game" class="button" id="stop" onclick="stopGame();">Stop Game!</button>
             </div>
             <div id="game-window">
                 <div class="target"></div>
@@ -75,7 +76,7 @@
     </div>
     <footer>
         <p id="left" class="dark">If you like the game feel free to pop into my github profile and checkout any new projects I may be building.</p>
-        <a href="https://github.com/Knasten" target="_blank" aria-label="Opens Knasten profile on github.(opens in a new tab).">
+        <a href="https://github.com/Knasten" target="_blank" rel="noopener" aria-label="Opens Knasten profile on github.(opens in a new tab).">
             <i class="fab fa-github-square"></i>
         </a>
         <p id="right" class="dark">Improvements of site pending!</p>
