@@ -8,6 +8,9 @@
         targetActive.classList.add("active")
         targetActive.classList.remove("target")
         targetActive.addEventListener('click', onHit);
+        if (Date.now() - startTime > 60000){
+            stopGame();
+}
 }
 function mask (){
     if(targetActive.classList !== "target"){
@@ -15,6 +18,12 @@ function mask (){
     targetActive.classList.add("target")
     targetActive.removeEventListener('click', onHit);
 }}}
+/**
+ * Function to clearinterval and stop game from running.
+*/
+function stopGame(){
+    clearInterval(globalThis.delay)
+}
 /**
  * Removes active class and makes it invisble again. And calls function,
  * scoreIncrement().
