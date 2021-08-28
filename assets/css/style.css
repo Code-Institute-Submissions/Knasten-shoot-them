@@ -7,6 +7,44 @@ body {
     font-family: 'Staatliches', cursive;
     background-color: rgb(15, 4, 32);
 }
+h1 {
+    color:#FFF;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
+}
+header {
+    background-color: rgb(7, 1, 12);
+    height: 10vh;
+    text-align: center;
+}
+footer {
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: #FFF;
+}
+a {
+    font-size: 360%;
+    display: inline-block;
+    width: 33%;
+}
+.box-text {
+    display: inline-block;
+}
+.button {
+    display: block;
+    width: 30%;
+    height: 100%;
+    font-size: 30px;
+    color: #FFF;
+    background-color: rgb(15, 4, 32);
+    border: none;
+    font-family: 'Staatliches', cursive;
+    float: left; 
+}
 .target {
     width: 3rem;
     height: 3rem;
@@ -14,6 +52,14 @@ body {
     display: inline-block;
     margin: 2% 4% 3% 4%;
     background-color: black;
+}
+.dark {
+    color: black;
+    display: inline-block;
+    width: 33%;
+}
+#text-box-below {
+    text-align: center;
 }
 #container {
     width: 100%;
@@ -38,17 +84,6 @@ body {
     width: 80%;
     height: 70vh;
 }
-.button {
-    display: block;
-    width: 30%;
-    height: 100%;
-    font-size: 30px;
-    color: #FFF;
-    background-color: rgb(15, 4, 32);
-    border: none;
-    font-family: 'Staatliches', cursive;
-    float: left; 
-}
 #start {
     float: left;
 }
@@ -61,18 +96,6 @@ p {
     text-transform: capitalize;
     color: #FFF;
 }
-header {
-    background-color: rgb(7, 1, 12);
-    height: 10vh;
-    text-align: center;
-}
 #controls-text {
     display: inline-block;
 }
-h1 {
-    color:#FFF;
-    display: inline-block;
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 5px;
-}
-
