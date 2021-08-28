@@ -53,12 +53,12 @@ p {
     float: left; 
 }
 .target {
-    width: 3%;
-    height: 6.2%;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     display: inline-block;
     margin: 2% 4% 3% 4%;
-    background-color: black;
+    background-color: red;
 }
 .active {
     width: 3%;
@@ -75,6 +75,8 @@ p {
 }
 #text-box-below {
     text-align: center;
+    position: fixed;
+    bottom: 10%;
 }
 #container {
     width: 100%;
@@ -110,10 +112,52 @@ p {
 }
 
 @media screen and (max-width: 992px){
+    .target {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
     #container {
-        height: 40%;
+        height: 60%;
     }
     .button {
         font-size: 150%;
+    }
+    .dark {
+        font-size: 100%;
+    }
+    #right {
+        float: right;
+    }
+    #left {
+        float: left;
+    }
+}
+@media screen and (min-width: 2090px){
+    body {
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 392px){
+    .target {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    body {
+        font-size: 14px;
+    }
+    footer {
+        height: 15%;
+    }
+    #text-box-below {
+        bottom: 15%;
+    }
+    .dark {
+        font-size: 100%;
+    }
+    #right {
+        float: right;
+    }
+    #left {
+        float: left;
     }
 }
