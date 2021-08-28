@@ -6,6 +6,7 @@
 body {
     font-family: 'Staatliches', cursive;
     background-color: rgb(15, 4, 32);
+    height: 100vh;
 }
 h1 {
     color:#FFF;
@@ -15,11 +16,11 @@ h1 {
 }
 header {
     background-color: rgb(7, 1, 12);
-    height: 10vh;
+    height: 10%;
     text-align: center;
 }
 footer {
-    height: 10vh;
+    height: 10%;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -31,6 +32,12 @@ a {
     display: inline-block;
     width: 33%;
 }
+p {
+    font-size: 130%;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #FFF;
+}
 .box-text {
     display: inline-block;
 }
@@ -38,7 +45,7 @@ a {
     display: block;
     width: 30%;
     height: 100%;
-    font-size: 30px;
+    font-size: 170%;
     color: #FFF;
     background-color: rgb(15, 4, 32);
     border: none;
@@ -46,12 +53,12 @@ a {
     float: left; 
 }
 .target {
-    width: 3rem;
-    height: 3rem;
+    width: 3%;
+    height: 6.2%;
     border-radius: 50%;
     display: inline-block;
     margin: 2% 4% 3% 4%;
-    background-color: black;
+    background-color: red;
 }
 .active {
     width: 3rem;
@@ -71,7 +78,7 @@ a {
 }
 #container {
     width: 100%;
-    height: 70vh;
+    height: 70%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -89,8 +96,8 @@ a {
     text-align: center;
 }
 #game-area {
-    width: 80%;
-    height: 70vh;
+    width: 90%;
+    height: 100%;
 }
 #start {
     float: left;
@@ -98,12 +105,15 @@ a {
 #stop {
     float: right;
 }
-p {
-    font-size: 130%;
-    font-weight: 800;
-    text-transform: capitalize;
-    color: #FFF;
-}
 #controls-text {
     display: inline-block;
+}
+
+@media screen and (max-width: 992px){
+    #container {
+        height: 40%;
+    }
+    .button {
+        font-size: 150%;
+    }
 }
