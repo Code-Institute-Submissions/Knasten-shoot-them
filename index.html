@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://kit.fontawesome.com/89b5a43f30.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-
+        <h1>Train Your Aim!</h1>
+        <p>You got 60 seconds to hit as many targets as you can!</p>
     </header>
     <div id="container">
         <div id="game-area">
-
-        </div>
-        <div id="game-window">
-            <div class="target"></div>
+            <div id="controls">
+                <p>Player Score: <span>0</span></p>
+                <button id="start">
+                    Click here to start!
+                </button>
+                <button id="stop">Stop Game!</button>
+            </div>
+            <div id="game-window">
                 <div class="target"></div>
                 <div class="target"></div>
                 <div class="target"></div>
@@ -56,13 +62,22 @@
                 <div class="target"></div>
                 <div class="target"></div>
                 <div class="target"></div>
+                <div class="target"></div>
+            </div>
         </div>
     </div>
     <div>
-        
+        <p>
+            When you are ready press the start button and fire away! <br>
+            If you hit a target you get one point BUT for each target shot they will show for less and less time.
+        </p>
     </div>
     <footer>
-
+        <p>If you like the game feel free to pop into my github profile and checkout any new projects I may be building.</p>
+        <a href="https://github.com/Knasten" target="_blank" aria-label="Opens Knasten profile on github.(opens in a new tab).">
+            <i class="fab fa-github-square"></i>
+        </a>
+        <p>Improvements of site pending!</p>
     </footer>
     <script src="/assets/js/script.js"></script>
 </body>
