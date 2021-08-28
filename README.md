@@ -1,7 +1,5 @@
 # Responsivness
 
-* **Only made responsive down to 982px because anything less than this the game loses it charm.**
-
 ![picture of responsivenss](./assets/readme-img/response.jpg)
 
 # Shoot Them!

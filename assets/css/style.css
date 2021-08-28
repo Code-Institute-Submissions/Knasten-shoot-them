@@ -38,9 +38,6 @@ p {
     text-transform: capitalize;
     color: #FFF;
 }
-.box-text {
-    display: inline-block;
-}
 .button {
     display: block;
     width: 30%;
@@ -76,7 +73,6 @@ p {
     width: 33%;
 }
 #text-box-below {
-    text-align: center;
     position: fixed;
     bottom: 10%;
 }
