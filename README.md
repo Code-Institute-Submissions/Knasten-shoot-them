@@ -66,10 +66,10 @@
 
 * HTML
     * No Faults when runnning it through the WSC3 Validator.
-    * ![picture of WSC3 Validation of the HTML](/assets/readme-img/html-vali.jpg)
+    * ![picture of WSC3 Validation of the HTML](./assets/readme-img/html-vali.jpg)
 * CSS
     * No Faults when runnning it through the Jigsaw Validator.
-    * ![picture of Jigsaw Validation of the CSS](/assets/readme-img/css-vali.jpg)
+    * ![picture of Jigsaw Validation of the CSS](./assets/readme-img/css-vali.jpg)
 
 # Tools
 
