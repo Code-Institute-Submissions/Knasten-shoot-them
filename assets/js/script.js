@@ -55,7 +55,7 @@ function stopGame(){
     this.classList.remove("active")
     this.classList.add("target")
     scoreIncrement();
-    time = time-200
+    time = time-10
 }
 /**
  * Takes old score and adds 1 for each time onHit() is called.
