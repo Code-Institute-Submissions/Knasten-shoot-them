@@ -38,3 +38,41 @@ body {
     width: 80%;
     height: 70vh;
 }
+.button {
+    display: block;
+    width: 30%;
+    height: 100%;
+    font-size: 30px;
+    color: #FFF;
+    background-color: rgb(15, 4, 32);
+    border: none;
+    font-family: 'Staatliches', cursive;
+    float: left; 
+}
+#start {
+    float: left;
+}
+#stop {
+    float: right;
+}
+p {
+    font-size: 130%;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #FFF;
+}
+header {
+    background-color: rgb(7, 1, 12);
+    height: 10vh;
+    text-align: center;
+}
+#controls-text {
+    display: inline-block;
+}
+h1 {
+    color:#FFF;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
+}
+
