@@ -1,16 +1,20 @@
 let time = 950;
 var startTime;
 var delay;
+var gameStarted = false;
+let startBtn = document.getElementById("start")
+let stopBtn = document.getElementById("stop")
 
 /**
  * Theese nested functions adds active class and removes target class.
  * And on timeout it removes active class and adds target class again.
  */
 function unMask() {
-    let targetActive = document.getElementsByClassName("target")[Math.floor(Math.random() * 40)];
-    if (targetActive.classList !== "active") {
-        targetActive.classList.add("active");
-        targetActive.classList.remove("target");
+    let totalTargets = document.getElementsByClassName("target").length
+    let targetActive = document.getElementsByClassName("target")[Math.floor(Math.random() * totalTargets)];
+    if (targetActive.classList !== "visible") {
+        targetActive.classList.add("visible");
+        targetActive.classList.remove("invisible");
         targetActive.addEventListener('click', onHit);
         if (Date.now() - startTime > 60000) {
             stopGame();
@@ -21,10 +25,12 @@ function unMask() {
     }
 
     function mask() {
-        if (targetActive.classList !== "target") {
-            targetActive.classList.remove("active");
-            targetActive.classList.add("target");
+        if (targetActive.classList !== "invisible") {
+            targetActive.classList.remove("visible");
+            targetActive.classList.add("invisible");
             targetActive.removeEventListener('click', onHit);
+        } else {
+            console.log("Target was already invisible!")
         }
     }
 }
@@ -43,8 +49,16 @@ function startUnMask(func, interval) {
  * Calls startUnMask()
  */
 function startSetInterval() {
-    startUnMask(unMask, 1000);
-    document.getElementById("score").innerHTML = 0;
+    if (gameStarted != true){
+        startUnMask(unMask, 1000);
+        document.getElementById("score").innerHTML = 0;
+        startBtn.classList.add("gray")
+        stopBtn.classList.add("red")
+        gameStarted = true;
+        console.log('new round')
+    } else{
+        alert("You already have one started game. To start a new game, stop the current one first!")
+    }
 }
 
 /**
@@ -52,6 +66,10 @@ function startSetInterval() {
  */
 function stopGame() {
     clearInterval(delay);
+    startBtn.classList.remove("gray")
+    startBtn.classList.add('purple')
+    stopBtn.classList.remove("red")
+    stopBtn.classList.add('gray')
 }
 
 /**
@@ -60,8 +78,8 @@ function stopGame() {
  * Also takes time off the timeout to increase difficulty on target hit. 
  */
 function onHit() {
-    this.classList.remove("active");
-    this.classList.add("target");
+    this.classList.remove("visible");
+    this.classList.add("invisible");
     scoreIncrement();
     time = time - 10;
 }
