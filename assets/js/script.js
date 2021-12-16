@@ -70,6 +70,7 @@ function stopGame() {
     startBtn.classList.add('purple')
     stopBtn.classList.remove("red")
     stopBtn.classList.add('gray')
+    gameStarted = false;
 }
 
 /**
