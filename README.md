@@ -54,7 +54,11 @@
 
 * I have tested responsiveness in Chrome Devtools down to 982px and it works fine.
 * Page was tested in several different browsers including chrome, firefox and Microsoft Edge.
-* Game has been tested and no errors have been located.
+* I have manually tested that.. 
+    * you can only start one game at a time
+    * If a game has ended you are able to start a new one.
+    * Number of targets should always coincide with actual targets on screen.
+* 
 
 # Bugs
 * Upon deploying the website I noticed that script and stylesheet was not being loaded as intended. I soon realised it had to do with my pathways not being correct. After adding "./" to all pathways it is working.

@@ -1,3 +1,7 @@
+window.onload = (event) => {
+    createTargets();
+    console.log('Page successfully loaded, targets should been added based on size')
+}
 let time = 950;
 var startTime;
 var delay;
@@ -5,12 +9,52 @@ var gameStarted = false;
 let startBtn = document.getElementById("start")
 let stopBtn = document.getElementById("stop")
 
+function createTargets(){
+    var screenWidth = window.screen.width;
+    let i = 0
+
+    if (screenWidth < 800){
+        while(i < 28){
+            let target = document.createElement('div')
+            let gameWindow = document.getElementById('game-window')
+            target.setAttribute('class', 'rounded-circle mobile-target px-3 ms-3 d-inline-block');
+            gameWindow.appendChild(target)
+            i++;
+        }
+    } else if (screenWidth > 800 && screenWidth < 1200){
+        while(i < 63){
+            let target = document.createElement('div')
+            let gameWindow = document.getElementById('game-window')
+            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block');
+            gameWindow.appendChild(target)
+            i++;
+        }
+    } else {
+        while(i < 170){
+            let target = document.createElement('div')
+            let gameWindow = document.getElementById('game-window')
+            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block');
+            gameWindow.appendChild(target)
+            i++;
+        }
+    }
+}
+
+// function createTarget(){
+//     let target = document.createElement('div')
+//     let gameWindow = document.getElementById('game-window')
+//     target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block')
+//     gameWindow.appendChild(target)
+// }
+
+
 /**
  * Theese nested functions adds active class and removes target class.
  * And on timeout it removes active class and adds target class again.
  */
 function unMask() {
     let totalTargets = document.getElementsByClassName("target").length
+    console.log(totalTargets)
     let targetActive = document.getElementsByClassName("target")[Math.floor(Math.random() * totalTargets)];
     if (targetActive.classList !== "visible") {
         targetActive.classList.add("visible");

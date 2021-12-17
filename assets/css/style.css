@@ -1,24 +1,30 @@
+/* --------------------- Imports ----------- */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
+
+/* --------------------- General ----------- */
 body {
     font-family: 'Staatliches', cursive;
     background-color: rgb(15, 4, 32);
     height: 100vh;
 }
+
 h1 {
     color:#FFF;
     display: inline-block;
     font-family: 'Lato', sans-serif;
     margin-bottom: 5px;
 }
+
 header {
     background-color: rgb(7, 1, 12);
     height: 10%;
     text-align: center;
 }
+
 footer {
     height: 10%;
     width: 100%;
@@ -27,17 +33,21 @@ footer {
     text-align: center;
     background-color: #FFF;
 }
+
 a {
     font-size: 360%;
     display: inline-block;
     width: 33%;
 }
+
 p {
     font-size: 130%;
     font-weight: 800;
     text-transform: capitalize;
     color: #FFF;
 }
+
+/* --------------------- Button ----------- */
 .button {
     display: block;
     width: 30%;
@@ -51,37 +61,31 @@ p {
     float: left; 
     cursor: pointer;
 }
-/* .target {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 2% 4% 3% 4%;
-    background-color: black;
-} */
 
+/* --------------------- targets ----------- */
 .target {
-    width: 5vh;
-    height: 5vh;
+    width: 50px;
+    height: 50px;
     background-color: #333;
 }
-.active {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 2% 4% 3% 4%;
-    background-color: crimson;
+
+.mobile-target {
+    width: 35px;
+    height: 35px;
+    background-color: #333;
 }
+
 .dark {
     color: black;
     display: inline-block;
     width: 33%;
 }
+
 #text-box-below {
     position: fixed;
     bottom: 10%;
 }
+
 #container {
     width: 100%;
     height: 70%;
@@ -89,87 +93,39 @@ p {
     display: flex;
     justify-content: center;
 }
+
 #game-window {
     background-color: black;
-    width: 100%;
-    height: 90%;
     cursor: crosshair;
 }
+
 #controls {
     background-color: rgb(15, 4, 32);
     width: 100%;
     height: 10%;
     text-align: center;
 }
+
 #game-area {
     width: 90%;
     height: 100%;
 }
+
 #start {
     float: left;
 }
+
 #stop {
     float: right;
 }
+
 #controls-text {
     display: inline-block;
 }
 
+/* --------------------- Media Queries ----------- */
 @media screen and (max-width: 992px){
-    .target {
-        width: 2.3rem;
-        height: 2.3rem;
-    }
-    .active {
-        width: 2.3rem;
-        height: 2.3rem;
-    }
-    #container {
-        height: 60%;
-    }
-    .button {
-        font-size: 150%;
-    }
-    .dark {
-        font-size: 100%;
-    }
-    #right {
-        float: right;
-    }
-    #left {
-        float: left;
-    }
-}
-@media screen and (min-width: 2090px){
-    body {
-        font-size: 28px;
-    }
-}
-@media screen and (max-width: 392px){
-    .target {
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-    .active {
-        width: 2.3rem;
-        height: 2.3rem;
-    }
-    body {
-        font-size: 14px;
-    }
-    footer {
-        height: 15%;
-    }
-    #text-box-below {
-        bottom: 15%;
-    }
-    .dark {
-        font-size: 100%;
-    }
-    #right {
-        float: right;
-    }
-    #left {
-        float: left;
+    header {
+        height: 180px;
     }
 }
