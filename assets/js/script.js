@@ -40,13 +40,6 @@ function createTargets(){
     }
 }
 
-// function createTarget(){
-//     let target = document.createElement('div')
-//     let gameWindow = document.getElementById('game-window')
-//     target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block')
-//     gameWindow.appendChild(target)
-// }
-
 
 /**
  * Theese nested functions adds active class and removes target class.
