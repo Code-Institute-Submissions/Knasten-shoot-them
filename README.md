@@ -8,17 +8,17 @@
 
 # Content
 
-1. Presentation
-2. Wireframes
-3. Colors
-4. Features
-5. Testing
-6. Bugs
-7. Validation
-8. Tools
-9. Deployment
-10. Credits
-11. Update 1.1
+1. [Presentation](#Presentation)
+2. [Wireframes](#Wireframes)
+3. [Colors](#Colors)
+4. [Features](#Features)
+5. [Testing](#Testing)
+6. [Bugs](#Bugs)
+7. [Validation](#Validation)
+8. [Tools](#Tools)
+9. [Deployment](#Deployment)
+10. [Credits](#Credits)
+11. [Update 1.1](#Update-1.1)
 
 # Presentation
 
@@ -126,12 +126,13 @@
 * To deploy this project follow steps below:
   -  Go to [repository](https://github.com/Knasten/shoot-them)
   -  Click the green gitpod button
-  -  Make any desired changes
+  -  Make any desired changes too code or html
   -  Save your repository
   -  Locate your repository
-  -  Enter settings for repository
-  -  Click pages tab
-  -  Select your branch from the menu
+  -  Enter settings for your repository
+  -  Click pages tab on the navbar to the left
+  -  Select your branch from the drop-down menu
+  -  Deploy.
   -  Deployed! You should now have a clickable link which should look like this "https://GITHUB_USERNAME.github.io/REPOSITORY_NAME/"
 
 # Credits
