@@ -9,6 +9,13 @@ var gameStarted = false;
 let startBtn = document.getElementById("start")
 let stopBtn = document.getElementById("stop")
 
+function displayTime() {
+    var timeLeft = Math.round((startTime + 60000 - Date.now()) / 1000);
+    let showTime = document.getElementById('time-left');
+    showTime.innerHTML = timeLeft;
+    console.log('Time should change')
+}
+
 function createTargets(){
     var screenWidth = window.screen.width;
     let i = 0
@@ -17,7 +24,7 @@ function createTargets(){
         while(i < 28){
             let target = document.createElement('div')
             let gameWindow = document.getElementById('game-window')
-            target.setAttribute('class', 'rounded-circle mobile-target px-3 ms-3 d-inline-block');
+            target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-block invisible');
             gameWindow.appendChild(target)
             i++;
         }
@@ -25,7 +32,7 @@ function createTargets(){
         while(i < 63){
             let target = document.createElement('div')
             let gameWindow = document.getElementById('game-window')
-            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block');
+            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block invisible');
             gameWindow.appendChild(target)
             i++;
         }
@@ -33,7 +40,7 @@ function createTargets(){
         while(i < 170){
             let target = document.createElement('div')
             let gameWindow = document.getElementById('game-window')
-            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block');
+            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block invisible');
             gameWindow.appendChild(target)
             i++;
         }
@@ -79,6 +86,7 @@ function startUnMask(func, interval) {
     func();
     delay = setInterval(func, interval);
     startTime = Date.now();
+    timer = setInterval(displayTime, 1000);
 }
 
 /**
@@ -103,11 +111,25 @@ function startSetInterval() {
  */
 function stopGame() {
     clearInterval(delay);
+    clearInterval(timer);
+    gameStarted = false;
+    resetClasses();
+    showResults();
+}
+
+/**
+ * Help function for stopGame
+ */
+function resetClasses(){
     startBtn.classList.remove("gray")
     startBtn.classList.add('purple')
     stopBtn.classList.remove("red")
     stopBtn.classList.add('gray')
-    gameStarted = false;
+}
+
+function showResults(){
+    let finalScore = parseInt(document.getElementById('score').innerHTML);
+    alert(`Congratulations you scored ${finalScore}!`)
 }
 
 /**

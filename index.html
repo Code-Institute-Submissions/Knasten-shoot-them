@@ -22,22 +22,23 @@
             </div>
         </div>
     </header>
-    <div class="container">
+    <div class="container mt-3">
         <div id="game-area">
             <div id="controls container">
-                <button aria-label="starts the game." class="button" id="start" onclick="startSetInterval();">
+                <button aria-label="starts the game." class="btn btn-lg purple ms-2 mt-2" id="start" onclick="startSetInterval();">
                     Start Game!
                 </button>
-                <button aria-label="stops the game" class="button" id="stop" onclick="stopGame();">Stop Game!</button>
+                <button aria-label="stops the game" class="btn btn-lg gray me-2 mt-2" id="stop" onclick="stopGame();">Stop Game!</button>
             </div>
             <div id="game-window" class="container py-3">
                 <div class="row"><p class="text-center" id="controls-text">Player Score: <span id="score">0</span></p></div>
+                <div class="row"><p class="text-center" id="time-text">Time Left: <span id="time-left">0</span></p></div>
                 <hr class="text-white">
             </div>
         </div>
     </div>
     <footer>
-        <p id="left" class="dark">If you like the game feel free to pop into my github profile and checkout any new projects I may be building.</p>
+        <p id="left" class="dark">Do you like the game? Click the github icon!</p>
         <a href="https://github.com/Knasten" target="_blank" rel="noopener" aria-label="Opens Knasten profile on github.(opens in a new tab).">
             <i class="fab fa-github-square"></i>
         </a>
