@@ -1,89 +1,96 @@
 window.onload = () => {
     createTargets();
-}
+};
 let time = 950;
 var startTime;
 var delay;
 var gameStarted = false;
-let startBtn = document.getElementById("start")
-let stopBtn = document.getElementById("stop")
+let startBtn = document.getElementById("start");
+let stopBtn = document.getElementById("stop");
 
+/**
+ * Counts the time and displays it as a timer
+ */
 function displayTime() {
     var timeLeft = Math.round((startTime + 60000 - Date.now()) / 1000);
     let showTime = document.getElementById('time-left');
     showTime.innerHTML = timeLeft;
     }
 
+/**
+ * Creates the targets, gets called on window load.
+ * Creates different quanitity and size targets based on screen width and height
+ */
 function createTargets(){
     var screenWidth = window.screen.width;
     var screenHeight = window.screen.height;
-    let i = 0
+    let i = 0;
 
     if (screenWidth <= 320){
         while(i < 35){
-            let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-row')
+            let target = document.createElement('div');
+            let gameWindow = document.getElementById('game-row');
             target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 invisible d-inline-flex');
-            gameWindow.appendChild(target)
+            gameWindow.appendChild(target);
             i++;
         }
     } else if (screenWidth >= 321 && screenWidth <= 468){
         while(i < 64){
-            let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-row')
+            let target = document.createElement('div');
+            let gameWindow = document.getElementById('game-row');
             target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-flex invisible');
-            gameWindow.appendChild(target)
+            gameWindow.appendChild(target);
             i++;
         }
     } else if (screenWidth >= 470 && screenWidth <= 776){
         while(i < 60){
-            let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-row')
+            let target = document.createElement('div');
+            let gameWindow = document.getElementById('game-row');
             target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-flex invisible');
-            gameWindow.appendChild(target)
+            gameWindow.appendChild(target);
             i++;
         }
     } else if (screenWidth >= 777 && screenWidth <= 999){
         while(i < 110){
-            let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-row')
+            let target = document.createElement('div');
+            let gameWindow = document.getElementById('game-row');
             target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-flex invisible');
-            gameWindow.appendChild(target)
+            gameWindow.appendChild(target);
             i++;
         }
     } else if (screenWidth >= 1000 && screenWidth <= 1197){
         if(screenHeight >= 851){
             while(i < 130){
-                let target = document.createElement('div')
-                let gameWindow = document.getElementById('game-row')
+                let target = document.createElement('div');
+                let gameWindow = document.getElementById('game-row');
                 target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
-                gameWindow.appendChild(target)
+                gameWindow.appendChild(target);
                 i++;
             }
         } else {
             while(i < 75){
-                let target = document.createElement('div')
-                let gameWindow = document.getElementById('game-row')
+                let target = document.createElement('div');
+                let gameWindow = document.getElementById('game-row');
                 target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
-                gameWindow.appendChild(target)
+                gameWindow.appendChild(target);
                 i++;
             }
         }
     } else {
         if(screenHeight >= 851){   
             while(i < 171){
-                let target = document.createElement('div')
-                let gameWindow = document.getElementById('game-row')
+                let target = document.createElement('div');
+                let gameWindow = document.getElementById('game-row');
                 target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
-                gameWindow.appendChild(target)
+                gameWindow.appendChild(target);
                 i++;
             }
         } else {
             while(i < 130){
-                let target = document.createElement('div')
-                let gameWindow = document.getElementById('game-row')
+                let target = document.createElement('div');
+                let gameWindow = document.getElementById('game-row');
                 target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
-                gameWindow.appendChild(target)
+                gameWindow.appendChild(target);
                 i++;
             }
         }   
@@ -96,8 +103,8 @@ function createTargets(){
  * And on timeout it removes active class and adds target class again.
  */
 function unMask() {
-    let totalTargets = document.getElementsByClassName("target").length
-    console.log(totalTargets)
+    let totalTargets = document.getElementsByClassName("target").length;
+    console.log(totalTargets);
     let targetActive = document.getElementsByClassName("target")[Math.floor(Math.random() * totalTargets)];
     if (targetActive.classList !== "visible") {
         targetActive.classList.add("visible");
@@ -124,7 +131,7 @@ function unMask() {
  * Sets interval on unMask() to start the game.
  */
 function startUnMask(func, interval) {
-    time = 950
+    time = 950;
     func();
     delay = setInterval(func, interval);
     startTime = Date.now();
@@ -137,37 +144,43 @@ function startUnMask(func, interval) {
  */
 function startSetInterval() {
     if (gameStarted != true){
-        alert('Score points by hiting the red targets as they appear! You got 60 seconds.')
+        alert('Score points by hiting the red targets as they appear! You got 60 seconds.');
         startUnMask(unMask, 1000);
         document.getElementById("score").innerHTML = 0;
         disableEnableStartBtn(); // Make sure this is called before setting gameStarted to true
         disableEnableStopBtn(); // Make sure this is called before setting gameStarted to true
         gameStarted = true;
     } else{
-        alert("You already have one started game. To start a new game, stop the current one first!")
+        alert("You already have one started game. To start a new game, stop the current one first!");
     }
 }
 
+/**
+ * Disables and enables StartBtn, gets called upon starting and stopping game
+ */
 function disableEnableStartBtn(){
     if (gameStarted != true){
-        startBtn.classList.remove("purple")
-        startBtn.classList.add("gray")
+        startBtn.classList.remove("purple");
+        startBtn.classList.add("gray");
         startBtn.disabled = true;
     } else {
-        startBtn.classList.remove("gray")
-        startBtn.classList.add('purple')
+        startBtn.classList.remove("gray");
+        startBtn.classList.add('purple');
         startBtn.disabled = false;
     }
 }
 
+/**
+ * Disables and enables StopBtn, gets called upon starting and stopping game
+ */
 function disableEnableStopBtn(){
     if (gameStarted != true){
-        stopBtn.classList.remove("gray")
-        stopBtn.classList.add("red")
+        stopBtn.classList.remove("gray");
+        stopBtn.classList.add("red");
         stopBtn.disabled = false;
     } else {
-        stopBtn.classList.remove("red")
-        stopBtn.classList.add('gray')
+        stopBtn.classList.remove("red");
+        stopBtn.classList.add('gray');
         stopBtn.disabled = true;
     }
 }
@@ -186,12 +199,14 @@ function stopGame() {
     }
 }
 
-
+/**
+ * Show the results in an alert box for the user. Gets called upon stopping game
+ */
 function showResults(){
     let finalScore = parseInt(document.getElementById('score').innerHTML);
     let timeLeft = parseInt(document.getElementById('time-left').innerHTML);
-    let time = 60 - timeLeft
-    alert(`Congratulations you scored ${finalScore} in ${time} seconds!`)
+    let time = 60 - timeLeft;
+    alert(`Congratulations you scored ${finalScore} in ${time} seconds!`);
 }
 
 /**
