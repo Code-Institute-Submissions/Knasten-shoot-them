@@ -1,6 +1,5 @@
 window.onload = () => {
     createTargets();
-    console.log('Page successfully loaded, targets should been added based on size')
 }
 let time = 950;
 var startTime;
@@ -13,8 +12,7 @@ function displayTime() {
     var timeLeft = Math.round((startTime + 60000 - Date.now()) / 1000);
     let showTime = document.getElementById('time-left');
     showTime.innerHTML = timeLeft;
-    console.log('Time should change')
-}
+    }
 
 function createTargets(){
     var screenWidth = window.screen.width;
@@ -105,7 +103,7 @@ function unMask() {
         targetActive.classList.add("visible");
         targetActive.classList.remove("invisible");
         targetActive.addEventListener('click', onHit);
-        if (Date.now() - startTime > 60000) {
+        if (Date.now() - startTime > 60300) {
             stopGame();
         }
         if (1) {
@@ -118,8 +116,6 @@ function unMask() {
             targetActive.classList.remove("visible");
             targetActive.classList.add("invisible");
             targetActive.removeEventListener('click', onHit);
-        } else {
-            console.log("Target was already invisible!")
         }
     }
 }
@@ -128,6 +124,7 @@ function unMask() {
  * Sets interval on unMask() to start the game.
  */
 function startUnMask(func, interval) {
+    time = 950
     func();
     delay = setInterval(func, interval);
     startTime = Date.now();
@@ -143,12 +140,9 @@ function startSetInterval() {
         alert('Score points by hiting the red targets as they appear! You got 60 seconds.')
         startUnMask(unMask, 1000);
         document.getElementById("score").innerHTML = 0;
-        stopBtn.classList.add("gray")
-        stopBtn.classList.add("red")
         disableEnableStartBtn(); // Make sure this is called before setting gameStarted to true
         disableEnableStopBtn(); // Make sure this is called before setting gameStarted to true
         gameStarted = true;
-        console.log('new round')
     } else{
         alert("You already have one started game. To start a new game, stop the current one first!")
     }
@@ -182,12 +176,14 @@ function disableEnableStopBtn(){
  * Function to clearinterval and stop game from running.
  */
 function stopGame() {
-    clearInterval(delay);
-    clearInterval(timer);
-    disableEnableStartBtn(); // Call before changing gameStarted
-    disableEnableStopBtn();
-    gameStarted = false;
-    showResults();
+    if (gameStarted){
+        showResults();
+        clearInterval(delay);
+        clearInterval(timer);
+        disableEnableStartBtn(); // Call before changing gameStarted
+        disableEnableStopBtn(); // Call before changing gameStarted
+        gameStarted = false;
+    }
 }
 
 

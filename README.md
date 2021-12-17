@@ -9,42 +9,64 @@
 # Content
 
 1. Presentation
-2. Features
-3. Testing
-4. Bugs
-5. Validation
-6. Tools
-7. Deployment
-8. Credits
-9. Update 1.1
+2. Wireframes
+3. Colors
+4. Features
+5. Testing
+6. Bugs
+7. Validation
+8. Tools
+9. Deployment
+10. Credits
+11. Update 1.1
 
 # Presentation
 
 * Shooter game in which you are supposed to hit the targets as they appear. You got 60 seconds to rack up as many points as possible.
+* My main purpose of this site was to create an easy yet viable way to train your aim and muscle memory.
+  - Aswell as make it possible for more people to train their aim no matter what equipment they are presented with.
 * Made by me as part of an education to become an full-stacked-developer.
   ![picture of full-page](./assets/readme-img/full-page.jpg)
+
+
+# Wireframes
+- Wireframes was made prior to updating the site.
+- I wanted to use a wireframe because this makes it easier to envision the site and how to make it reality.
+- They were made using [Uizard](https://uizard.io/)
+    ![Wireframe](./assets/readme-img/Wireframe.png)
+
+# Colors
+- For header I choose to go with a dark purple color, I choose this beacuse the theme of the site is quite dark.
+- For game background I went with the classic black. This make the targets appear much brighter and easier to spot.
+- The targets are red and I choose this color because it is one easiest spotted by the human eye.
+- For stop button when active I choose red which is a typical warning/danger color.
+- For start button when active I choose to go with a brighter purple to keep up with the theme of my header.
+- For disabled buttons I choose to go with gray since it is a normal color for this behaviour.
+
 
 # Features
 
 * Header
-    * Small header with a heading and a small piece of text "You Got 60 Seconds To Hit As Many Targets As You Can!"
+    * Is used to break of the backgound and introduce you to the site.
+    * Has a purple backgound color which I think goes along very well with the theme.
 ![picture of header](./assets/readme-img/header.jpg)
 
 * Controls
-    * Start button starts the game on player command.
-    * Stop button stops the game on player command. (If not stopped by player script stops it after 60 seconds has passed.)
+    * Start button, linked to start game function and is disabled upon game start.
+    * Stop button, linked to stop game function and is enabled upon game start.
+     - If game hasn't been stopped before 60 seconds has passed, the game calls the stop function it self.
+     ![picture of button](./assets/readme-img/controls.jpg)
     * Score
         * In the middle top of the gamewindow you can find your score. This increases each time you successfully hits a target.
-        * For each score you get the time the target appears lessens by 10ms
-![picture of button](./assets/readme-img/controls.jpg)
+        * For each score you get, target visible time decreases with 10ms
 * Game-Window
     * It is in this window the game will be played, all targets appear within this window.
     * Targets
-        * Theese you will find all over in the game window. How ever they are not visible until made active by script.
-        * When made active by script an event viewer is added to record any click on the targets.
+        * Theese are created upon loading the window.
+          - Depending on screen-size different amount of targets appear.
 ![picture of game-window](./assets/readme-img/game-window.jpg)
 * Text
-    * Just below game window you can find a small box of text explaining the game rules.
+    * Just below game window you can find a small box of text explaining the game rules. (This has been changed to alertbox)
 ![picture of text box below game-window](./assets/readme-img/text-below.jpg)
 * Footer
     * Here you can find a link to my Github profile page. Opens in a new tab for better user experience.
@@ -53,18 +75,27 @@
 
 # Testing
 
-* I have tested responsiveness in Chrome Devtools down to 982px and it works fine.
+* Tested this site using responsiveness tools.
+* Tested to work on phones, tablets and PC's
+* Tested on phone (OnePlus 7 Pro) everything worked and looked neat.
 * Page was tested in several different browsers including chrome, firefox and Microsoft Edge.
 * I have manually tested that.. 
     * you can only start one game at a time
-    * If a game has ended you are able to start a new one.
-    * Number of targets should always coincide with actual targets on screen.
-* 
+    * if a game has ended you are able to start a new one.
+    * number of targets should always coincide with actual targets on screen.
+    * targets do not appear outside of gamewindow
+    * when target is hit score increases
+    * timer is working and counting down
+    * when timer reaches 0 game ends.
+    * Upon starting game start button is disabled and stop button enabled
+    * Upon ending game start button is enabled and stop button disabled
 
 # Bugs
 * Upon deploying the website I noticed that script and stylesheet was not being loaded as intended. I soon realised it had to do with my pathways not being correct. After adding "./" to all pathways it is working.
 * No found bugs was left unfixed.
 * Any bug reports can be sent to hampusjojo@gmail.com for review.
+* See future bug fixes in future patch notes
+
 # Validation
 
 * HTML
@@ -92,17 +123,24 @@
 
 # Deployment
 
-* This site was deployed to GitHub pages. Steps to deploy are as follows:
-    * Go to GitHub repository and choose settings
-    * From settings, choose pages tab
-    * Select branch main from the menu
-    * You now have a clickable live link
+* To deploy this project follow steps below:
+  -  Go to [repository](https://github.com/Knasten/shoot-them)
+  -  Click the green gitpod button
+  -  Make any desired changes
+  -  Save your repository
+  -  Locate your repository
+  -  Enter settings for repository
+  -  Click pages tab
+  -  Select your branch from the menu
+  -  Deployed! You should now have a clickable link which should look like this "https://GITHUB_USERNAME.github.io/REPOSITORY_NAME/"
 
 # Credits
 
 * For the "function scoreIncrement()" I borrowed code from our love maths project we did in school just prior to starting this portfolio project. (Credit goes to CodeInstitute)
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    
 # Update 1.1
 
 ## New implementations
@@ -120,6 +158,7 @@
  - Buttons has gotten a touch up. Added JS to disable and change classes depending on game state.
  - New timer can be seen under the score to better keep track of progress.
  - Besides this it is a general touch up of how it used to look.
+ - Most of text has been put to alert boxes to clean up the looks of the site.
 
 ## Testing
  - Buttons has been manually tested both in-game and out of game.
@@ -127,4 +166,5 @@
 
 ## Bugfixes / User Concern Fixes
  - Before players could start several games at once, this has been resolved.
- - No feedback for user, added with timer and alerts after each game.
+ - No feedback for user, solved by adding timer and alerts after each game.
+ - See future bug fixes in future patch notes
