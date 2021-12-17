@@ -1,4 +1,4 @@
-window.onload = (event) => {
+window.onload = () => {
     createTargets();
     console.log('Page successfully loaded, targets should been added based on size')
 }
@@ -18,40 +18,77 @@ function displayTime() {
 
 function createTargets(){
     var screenWidth = window.screen.width;
+    var screenHeight = window.screen.height;
     let i = 0
 
-    if (screenWidth <= 767){
-        while(i < 28){
+    if (screenWidth <= 320){
+        while(i < 35){
             let target = document.createElement('div')
             let gameWindow = document.getElementById('game-row')
             target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 invisible d-inline-flex');
             gameWindow.appendChild(target)
             i++;
         }
-    } else if (screenWidth >= 768 && screenWidth <= 899){
-        while(i < 28){
+    } else if (screenWidth >= 321 && screenWidth <= 468){
+        while(i < 64){
             let target = document.createElement('div')
             let gameWindow = document.getElementById('game-row')
-            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
+            target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-flex invisible');
             gameWindow.appendChild(target)
             i++;
         }
-    } else if (screenWidth >= 900 && screenWidth <= 1197){
-        while(i < 130){
+    } else if (screenWidth >= 470 && screenWidth <= 776){
+        while(i < 60){
             let target = document.createElement('div')
             let gameWindow = document.getElementById('game-row')
-            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
+            target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-flex invisible');
             gameWindow.appendChild(target)
             i++;
+        }
+    } else if (screenWidth >= 777 && screenWidth <= 999){
+        while(i < 110){
+            let target = document.createElement('div')
+            let gameWindow = document.getElementById('game-row')
+            target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-flex invisible');
+            gameWindow.appendChild(target)
+            i++;
+        }
+    } else if (screenWidth >= 1000 && screenWidth <= 1197){
+        if(screenHeight >= 851){
+            while(i < 130){
+                let target = document.createElement('div')
+                let gameWindow = document.getElementById('game-row')
+                target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
+                gameWindow.appendChild(target)
+                i++;
+            }
+        } else {
+            while(i < 75){
+                let target = document.createElement('div')
+                let gameWindow = document.getElementById('game-row')
+                target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
+                gameWindow.appendChild(target)
+                i++;
+            }
         }
     } else {
-        while(i < 171){
-            let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-row')
-            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
-            gameWindow.appendChild(target)
-            i++;
-        }
+        if(screenHeight >= 851){   
+            while(i < 171){
+                let target = document.createElement('div')
+                let gameWindow = document.getElementById('game-row')
+                target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
+                gameWindow.appendChild(target)
+                i++;
+            }
+        } else {
+            while(i < 130){
+                let target = document.createElement('div')
+                let gameWindow = document.getElementById('game-row')
+                target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
+                gameWindow.appendChild(target)
+                i++;
+            }
+        }   
     }
 }
 
@@ -103,16 +140,41 @@ function startUnMask(func, interval) {
  */
 function startSetInterval() {
     if (gameStarted != true){
+        alert('Score points by hiting the red targets as they appear! You got 60 seconds.')
         startUnMask(unMask, 1000);
         document.getElementById("score").innerHTML = 0;
-        startBtn.classList.remove("purple")
-        startBtn.classList.add("gray")
         stopBtn.classList.add("gray")
         stopBtn.classList.add("red")
+        disableEnableStartBtn(); // Make sure this is called before setting gameStarted to true
+        disableEnableStopBtn(); // Make sure this is called before setting gameStarted to true
         gameStarted = true;
         console.log('new round')
     } else{
         alert("You already have one started game. To start a new game, stop the current one first!")
+    }
+}
+
+function disableEnableStartBtn(){
+    if (gameStarted != true){
+        startBtn.classList.remove("purple")
+        startBtn.classList.add("gray")
+        startBtn.disabled = true;
+    } else {
+        startBtn.classList.remove("gray")
+        startBtn.classList.add('purple')
+        startBtn.disabled = false;
+    }
+}
+
+function disableEnableStopBtn(){
+    if (gameStarted != true){
+        stopBtn.classList.remove("gray")
+        stopBtn.classList.add("red")
+        stopBtn.disabled = false;
+    } else {
+        stopBtn.classList.remove("red")
+        stopBtn.classList.add('gray')
+        stopBtn.disabled = true;
     }
 }
 
@@ -122,24 +184,18 @@ function startSetInterval() {
 function stopGame() {
     clearInterval(delay);
     clearInterval(timer);
+    disableEnableStartBtn(); // Call before changing gameStarted
+    disableEnableStopBtn();
     gameStarted = false;
-    resetClasses();
     showResults();
 }
 
-/**
- * Help function for stopGame
- */
-function resetClasses(){
-    startBtn.classList.remove("gray")
-    startBtn.classList.add('purple')
-    stopBtn.classList.remove("red")
-    stopBtn.classList.add('gray')
-}
 
 function showResults(){
     let finalScore = parseInt(document.getElementById('score').innerHTML);
-    alert(`Congratulations you scored ${finalScore}!`)
+    let timeLeft = parseInt(document.getElementById('time-left').innerHTML);
+    let time = 60 - timeLeft
+    alert(`Congratulations you scored ${finalScore} in ${time} seconds!`)
 }
 
 /**

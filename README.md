@@ -16,6 +16,7 @@
 6. Tools
 7. Deployment
 8. Credits
+9. Update 1.1
 
 # Presentation
 
@@ -100,3 +101,30 @@
 # Credits
 
 * For the "function scoreIncrement()" I borrowed code from our love maths project we did in school just prior to starting this portfolio project. (Credit goes to CodeInstitute)
+
+
+# Update 1.1
+
+## New implementations
+ - Added function to create targets based on screen size
+ - Better sized targets
+ - Buttons have feedback for user and shuts off depending on if game is started or not
+ - Added timer
+
+## Future Implemetations
+ - Add possibility for the user to select number of targets
+ - Add possibility to select how long targets appear
+ - Scoreboard
+
+## New UI
+ - Buttons has gotten a touch up. Added JS to disable and change classes depending on game state.
+ - New timer can be seen under the score to better keep track of progress.
+ - Besides this it is a general touch up of how it used to look.
+
+## Testing
+ - Buttons has been manually tested both in-game and out of game.
+ - Game has been test run and after finished round. Player gets the wanted feedback.
+
+## Bugfixes / User Concern Fixes
+ - Before players could start several games at once, this has been resolved.
+ - No feedback for user, added with timer and alerts after each game.
