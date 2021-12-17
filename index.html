@@ -18,31 +18,35 @@
                 <h1>Train Your Aim!</h1>
             </div>
             <div class="col-12">
-                <p>You got 60 seconds to hit as many targets as you can!</p>
+                <p>Ready! Aim! Fire!</p>
             </div>
         </div>
     </header>
-    <div class="container mt-3">
+    <div class="container game-wrapper mt-3">
         <div id="game-area">
-            <div id="controls container">
+            <div id="controls">
                 <button aria-label="starts the game." class="btn btn-lg purple ms-2 mt-2" id="start" onclick="startSetInterval();">
-                    Start Game!
+                    Start!
                 </button>
-                <button aria-label="stops the game" class="btn btn-lg gray me-2 mt-2" id="stop" onclick="stopGame();">Stop Game!</button>
+                <button aria-label="stops the game" class="btn btn-lg gray me-2 mt-2" id="stop" onclick="stopGame();">Stop!</button>
             </div>
             <div id="game-window" class="container py-3">
-                <div class="row"><p class="text-center" id="controls-text">Player Score: <span id="score">0</span></p></div>
+                <div class="row"><p class="text-center" id="controls-text">Score: <span id="score">0</span></p></div>
                 <div class="row"><p class="text-center" id="time-text">Time Left: <span id="time-left">0</span></p></div>
                 <hr class="text-white">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap" id="game-row">
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <footer>
-        <p id="left" class="dark">Do you like the game? Click the github icon!</p>
+    <footer class="opacity">
+        <p class="small dark d-inline-block">Enjoy? Click <span><i class="fas fa-chevron-right"></i></span></p>
         <a href="https://github.com/Knasten" target="_blank" rel="noopener" aria-label="Opens Knasten profile on github.(opens in a new tab).">
             <i class="fab fa-github-square"></i>
         </a>
-        <p id="right" class="dark">Improvements of site pending!</p>
     </footer>
     <script src="https://kit.fontawesome.com/89b5a43f30.js" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>

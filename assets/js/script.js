@@ -20,27 +20,35 @@ function createTargets(){
     var screenWidth = window.screen.width;
     let i = 0
 
-    if (screenWidth < 800){
+    if (screenWidth <= 767){
         while(i < 28){
             let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-window')
-            target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 d-inline-block invisible');
+            let gameWindow = document.getElementById('game-row')
+            target.setAttribute('class', 'rounded-circle mobile-target target px-3 ms-3 invisible d-inline-flex');
             gameWindow.appendChild(target)
             i++;
         }
-    } else if (screenWidth > 800 && screenWidth < 1200){
-        while(i < 63){
+    } else if (screenWidth >= 768 && screenWidth <= 899){
+        while(i < 28){
             let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-window')
-            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block invisible');
+            let gameWindow = document.getElementById('game-row')
+            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
+            gameWindow.appendChild(target)
+            i++;
+        }
+    } else if (screenWidth >= 900 && screenWidth <= 1197){
+        while(i < 130){
+            let target = document.createElement('div')
+            let gameWindow = document.getElementById('game-row')
+            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
             gameWindow.appendChild(target)
             i++;
         }
     } else {
-        while(i < 170){
+        while(i < 171){
             let target = document.createElement('div')
-            let gameWindow = document.getElementById('game-window')
-            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-block invisible');
+            let gameWindow = document.getElementById('game-row')
+            target.setAttribute('class', 'rounded-circle target px-3 ms-3 d-inline-flex invisible');
             gameWindow.appendChild(target)
             i++;
         }
@@ -97,7 +105,9 @@ function startSetInterval() {
     if (gameStarted != true){
         startUnMask(unMask, 1000);
         document.getElementById("score").innerHTML = 0;
+        startBtn.classList.remove("purple")
         startBtn.classList.add("gray")
+        stopBtn.classList.add("gray")
         stopBtn.classList.add("red")
         gameStarted = true;
         console.log('new round')
