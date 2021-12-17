@@ -20,7 +20,7 @@
 10. [Credits](#Credits)
 11. [Update 1.1](#Update-1.1)
 
-# Presentation
+# Presentation | [top](#Responsivness)
 
 * Shooter game in which you are supposed to hit the targets as they appear. You got 60 seconds to rack up as many points as possible.
 * My main purpose of this site was to create an easy yet viable way to train your aim and muscle memory.
@@ -29,13 +29,13 @@
   ![picture of full-page](./assets/readme-img/full-page.jpg)
 
 
-# Wireframes
+# Wireframes | [top](#Responsivness)
 - Wireframes was made prior to updating the site.
 - I wanted to use a wireframe because this makes it easier to envision the site and how to make it reality.
 - They were made using [Uizard](https://uizard.io/)
     ![Wireframe](./assets/readme-img/Wireframe.png)
 
-# Colors
+# Colors | [top](#Responsivness)
 - For header I choose to go with a dark purple color, I choose this beacuse the theme of the site is quite dark.
 - For game background I went with the classic black. This make the targets appear much brighter and easier to spot.
 - The targets are red and I choose this color because it is one easiest spotted by the human eye.
@@ -44,7 +44,7 @@
 - For disabled buttons I choose to go with gray since it is a normal color for this behaviour.
 
 
-# Features
+# Features | [top](#Responsivness)
 
 * Header
     * Is used to break of the backgound and introduce you to the site.
@@ -73,7 +73,7 @@
     * You can also find information text and as written in footer the game will be improved later.
 ![picture of the footer](./assets/readme-img/footer.jpg)
 
-# Testing
+# Testing | [top](#Responsivness)
 
 * Tested this site using responsiveness tools.
 * Tested to work on phones, tablets and PC's
@@ -90,13 +90,13 @@
     * Upon starting game start button is disabled and stop button enabled
     * Upon ending game start button is enabled and stop button disabled
 
-# Bugs
+# Bugs | [top](#Responsivness)
 * Upon deploying the website I noticed that script and stylesheet was not being loaded as intended. I soon realised it had to do with my pathways not being correct. After adding "./" to all pathways it is working.
 * No found bugs was left unfixed.
 * Any bug reports can be sent to hampusjojo@gmail.com for review.
 * See future bug fixes in future patch notes
 
-# Validation
+# Validation | [top](#Responsivness)
 
 * HTML
     * No Faults when runnning it through the WSC3 Validator.<br>
@@ -108,7 +108,7 @@
     * One error found which exist cause I call the function from within the HTML.<br>
      ![picture of javascript validation](./assets/readme-img/js-vali.jpg)
 
-# Tools
+# Tools | [top](#Responsivness)
 
 * Gitpod was used during the process of making this website.
     * HTML5 was used for marking up the website.
@@ -121,7 +121,7 @@
 * I used [Lighthouse](https://developers.google.com/web/tools/lighthouse) to evaluate my website. <br>
 ![picture of lighthouse report](./assets/readme-img/lighthouse.jpg)
 
-# Deployment
+# Deployment | [top](#Responsivness)
 
 * To deploy this project follow steps below:
   -  Go to [repository](https://github.com/Knasten/shoot-them)
@@ -135,14 +135,14 @@
   -  Deploy.
   -  Deployed! You should now have a clickable link which should look like this "https://GITHUB_USERNAME.github.io/REPOSITORY_NAME/"
 
-# Credits
+# Credits | [top](#Responsivness)
 
 * For the "function scoreIncrement()" I borrowed code from our love maths project we did in school just prior to starting this portfolio project. (Credit goes to CodeInstitute)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     
-# Update 1.1
+# Update 1.1 | [top](#Responsivness)
 
 ## New implementations
  - Added function to create targets based on screen size
@@ -165,7 +165,7 @@
  - Buttons has been manually tested both in-game and out of game.
  - Game has been test run and after finished round. Player gets the wanted feedback.
 
-## Bugfixes / User Concern Fixes
+## Bugfixes / User Concern Fixes [top](#Responsivness)
  - Before players could start several games at once, this has been resolved.
  - No feedback for user, solved by adding timer and alerts after each game.
  - See future bug fixes in future patch notes
