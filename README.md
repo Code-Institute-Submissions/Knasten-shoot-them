@@ -10,17 +10,18 @@
 
 1. [Presentation](#Presentation--top)
 2. [User Experience (UX)](#user-experience-ux--top)
-3. [Wireframes](#Wireframes--top)
-4. [User Stories](#User-Stories--top)
-5. [Colors](#Colors--top)
-6. [Features](#Features--top)
-7. [Testing](#Testing--top)
-8. [Bugs](#Bugs--top)
-9. [Validation](#Validation--top)
-10. [Tools](#Tools--top)
-11. [Deployment](#Deployment--top)
-12. [Credits](#Credits--top)
-13. [Update 1.1](#update-11--top)
+3. [Flowchart](#flowchart--top)
+4. [Wireframes](#Wireframes--top)
+5. [User Stories](#User-Stories--top)
+6. [Colors](#Colors--top)
+7. [Features](#Features--top)
+8. [Testing](#Testing--top)
+9. [Bugs](#Bugs--top)
+10. [Validation](#Validation--top)
+11. [Tools](#Tools--top)
+12. [Deployment](#Deployment--top)
+13. [Credits](#Credits--top)
+14. [Update 1.1](#update-11--top)
 
 # Presentation | [top](#Responsivness)
 
@@ -40,7 +41,11 @@ In this game area you will also see alot of target become visible as you hunt th
 As soon as game is started an alert will pop up explaining the rules while pausing the game until the user decides to continue.  
 When a game ends an alert box will appear telling you how good score you got and how long you played for.
 
-
+# Flowchart | [top](#Responsivness)
+- It starts with the page being loaded and calling for the targets to be created based on screen width.
+- As for the other you will be able to see what my plan started with below.
+- [flowchart](./assets/readme-img/flowchart.png)
+- Besides what can be seen above I have implemented some helper functions for changing buttons and resetting after games.
 
 # Wireframes | [top](#Responsivness)
 - Wireframes was made prior to updating the site.
