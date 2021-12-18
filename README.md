@@ -9,7 +9,7 @@
 # Content
 
 1. [Presentation](#Presentation--top)
-2. [User Experience (UX)](#User-Experience-(UX)--top)
+2. [User Experience (UX)](#user-experience-ux--top)
 3. [Wireframes](#Wireframes--top)
 4. [User Stories](#User-Stories--top)
 5. [Colors](#Colors--top)
@@ -20,7 +20,7 @@
 10. [Tools](#Tools--top)
 11. [Deployment](#Deployment--top)
 12. [Credits](#Credits--top)
-13. [Update 1.1](#Update-1.1--top)
+13. [Update 1.1](#update-11--top)
 
 # Presentation | [top](#Responsivness)
 

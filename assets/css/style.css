@@ -53,17 +53,8 @@ p {
 
 /* --------------------- Button ----------- */
 .button {
-    display: block;
-    width: 30%;
-    height: 100%;
-    font-size: 170%;
-    color: #FFF;
-    background-color: #333;
-    border: outset;
-    border-color: #FFF(28, 3, 117);
-    font-family: 'Staatliches', cursive;
-    float: left; 
     cursor: pointer;
+    border: #FFF solid 1px !important;
 }
 
 .purple {
