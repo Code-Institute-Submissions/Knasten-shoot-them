@@ -9,16 +9,18 @@
 # Content
 
 1. [Presentation](#Presentation)
-2. [Wireframes](#Wireframes)
-3. [Colors](#Colors)
-4. [Features](#Features)
-5. [Testing](#Testing)
-6. [Bugs](#Bugs)
-7. [Validation](#Validation)
-8. [Tools](#Tools)
-9. [Deployment](#Deployment)
-10. [Credits](#Credits)
-11. [Update 1.1](#Update-1.1)
+2. [User Experience (UX)](#User-Experience-(UX))
+3. [Wireframes](#Wireframes)
+4. [User Stories](#User-Stories)
+5. [Colors](#Colors)
+6. [Features](#Features)
+7. [Testing](#Testing)
+8. [Bugs](#Bugs)
+9. [Validation](#Validation)
+10. [Tools](#Tools)
+11. [Deployment](#Deployment)
+12. [Credits](#Credits)
+13. [Update 1.1](#Update-1.1)
 
 # Presentation | [top](#Responsivness)
 
@@ -27,6 +29,17 @@
   - Aswell as make it possible for more people to train their aim no matter what equipment they are presented with.
 * Made by me as part of an education to become an full-stacked-developer.
   ![picture of full-page](./assets/readme-img/full-page.jpg)
+* Design wise my goal has been to create something that pleases the eyes and works well for the user.
+
+
+# User Experience (UX) | [top](#Responsivness)
+As for user experience I went for a simple look.  
+A header, 2 buttons, a gamearea, score and timer. All the components used in this site to make it better and more comfortable for you the user.  
+As mentioned above you will find an game area with timer and score. The timer tells you how many seconds there is left on the round. Score tells the score...
+In this game area you will also see alot of target become visible as you hunt them down for glory.
+As soon as game is started an alert will pop up explaining the rules while pausing the game until the user decides to continue.  
+When a game ends an alert box will appear telling you how good score you got and how long you played for.
+
 
 
 # Wireframes | [top](#Responsivness)
@@ -34,6 +47,19 @@
 - I wanted to use a wireframe because this makes it easier to envision the site and how to make it a reality.
 - It was made using [Uizard](https://uizard.io/)
     ![Wireframe](./assets/readme-img/Wireframe.png)
+
+# User Stories | [top](#Responsivness)
+
+| **As a user I would like to**                      | **So that I can**                             |
+| -------------------------------------------------- | --------------------------------------------- |
+| Be able to track my score                          | measure if I am getting any better            |
+| Be able to track how much time there is left       | focus on just hitting the targets             |
+| Get feedback on what is happening                  | know when there is actions being taken        |
+
+| **As a site owner I would like to**                | **So that I can**                             |
+| -------------------------------------------------- | --------------------------------------------- |
+| entertain my visitors                              | continue getting support for any new projects |
+
 
 # Colors | [top](#Responsivness)
 - For header I choose to go with a dark purple color, I wanted a dark color to make it stick out.
@@ -160,6 +186,12 @@
  - New timer can be seen under the score to better keep track of progress.
  - Besides this it is a general touch up of how it used to look.
  - Most of text has been put to alert boxes to clean up the looks of the site.
+
+### Picture new site looks
+ - ![Picture new UI](./assets/readme-img/newpage.jpg)
+
+ #### Picture new footer
+ - ![Picture new footer](./assets/readme-img/newfooter.png)
 
 ## Testing
  - Buttons has been manually tested both in-game and out of game.
