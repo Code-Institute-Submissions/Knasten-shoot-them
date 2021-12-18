@@ -8,19 +8,19 @@
 
 # Content
 
-1. [Presentation](#Presentation)
-2. [User Experience (UX)](#User-Experience-(UX))
-3. [Wireframes](#Wireframes)
-4. [User Stories](#User-Stories)
-5. [Colors](#Colors)
-6. [Features](#Features)
-7. [Testing](#Testing)
-8. [Bugs](#Bugs)
-9. [Validation](#Validation)
-10. [Tools](#Tools)
-11. [Deployment](#Deployment)
-12. [Credits](#Credits)
-13. [Update 1.1](#Update-1.1)
+1. [Presentation](Presentation)
+2. [User Experience (UX)](User-Experience-(UX))
+3. [Wireframes](Wireframes)
+4. [User Stories](User-Stories)
+5. [Colors](Colors)
+6. [Features](Features)
+7. [Testing](Testing)
+8. [Bugs](Bugs)
+9. [Validation](Validation)
+10. [Tools](Tools)
+11. [Deployment](Deployment)
+12. [Credits](Credits)
+13. [Update 1.1](Update-1.1)
 
 # Presentation | [top](#Responsivness)
 
@@ -32,7 +32,7 @@
 * Design wise my goal has been to create something that pleases the eyes and works well for the user.
 
 
-# User Experience (UX) | [top](#Responsivness)
+# User-Experience-(UX) | [top](#Responsivness)
 As for user experience I went for a simple look.  
 A header, 2 buttons, a gamearea, score and timer. All the components used in this site to make it better and more comfortable for you the user.  
 As mentioned above you will find an game area with timer and score. The timer tells you how many seconds there is left on the round. Score tells the score...
@@ -48,7 +48,7 @@ When a game ends an alert box will appear telling you how good score you got and
 - It was made using [Uizard](https://uizard.io/)
     ![Wireframe](./assets/readme-img/Wireframe.png)
 
-# User Stories | [top](#Responsivness)
+# User-Stories | [top](#Responsivness)
 
 | **As a user I would like to**                      | **So that I can**                             |
 | -------------------------------------------------- | --------------------------------------------- |
@@ -166,7 +166,7 @@ When a game ends an alert box will appear telling you how good score you got and
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     
-# Update 1.1 | [top](#Responsivness)
+# Update-1.1 | [top](#Responsivness)
 
 ## New implementations
  - Added function to create targets based on screen size
