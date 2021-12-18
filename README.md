@@ -31,34 +31,34 @@
 
 # Wireframes | [top](#Responsivness)
 - Wireframes was made prior to updating the site.
-- I wanted to use a wireframe because this makes it easier to envision the site and how to make it reality.
-- They were made using [Uizard](https://uizard.io/)
+- I wanted to use a wireframe because this makes it easier to envision the site and how to make it a reality.
+- It was made using [Uizard](https://uizard.io/)
     ![Wireframe](./assets/readme-img/Wireframe.png)
 
 # Colors | [top](#Responsivness)
-- For header I choose to go with a dark purple color, I choose this beacuse the theme of the site is quite dark.
-- For game background I went with the classic black. This make the targets appear much brighter and easier to spot.
-- The targets are red and I choose this color because it is one easiest spotted by the human eye.
-- For stop button when active I choose red which is a typical warning/danger color.
-- For start button when active I choose to go with a brighter purple to keep up with the theme of my header.
-- For disabled buttons I choose to go with gray since it is a normal color for this behaviour.
+- For header I choose to go with a dark purple color, I wanted a dark color to make it stick out.
+- For game background I went with the classic black. This makes the targets appear much brighter and therefore easier to spot.
+- The targets are red and I choose this color because it will really stand out against the black.
+- If the stop button is active it displays with a bright red color representing danger/warning
+- If the start button is active it displays with a light-purple color to show it is active. Matching the header.
+- If the stop/start button is inactive it displays with a gray color to show that it is inactive.
 
 
 # Features | [top](#Responsivness)
 
 * Header
-    * Is used to break of the backgound and introduce you to the site.
+    * Main purpose for the header is to introduce the user to the site.
     * Has a purple backgound color which I think goes along very well with the theme.
 ![picture of header](./assets/readme-img/header.jpg)
 
 * Controls
     * Start button, linked to start game function and is disabled upon game start.
     * Stop button, linked to stop game function and is enabled upon game start.
-     - If game hasn't been stopped before 60 seconds has passed, the game calls the stop function it self.
+     - If game hasn't been stopped before 60 seconds has passed, the game calls the stop function by itself.
      ![picture of button](./assets/readme-img/controls.jpg)
     * Score
         * In the middle top of the gamewindow you can find your score. This increases each time you successfully hits a target.
-        * For each score you get, target visible time decreases with 10ms
+        * For each score you get, targets visible time decreases with 10ms
 * Game-Window
     * It is in this window the game will be played, all targets appear within this window.
     * Targets
@@ -92,9 +92,7 @@
 
 # Bugs | [top](#Responsivness)
 * Upon deploying the website I noticed that script and stylesheet was not being loaded as intended. I soon realised it had to do with my pathways not being correct. After adding "./" to all pathways it is working.
-* No found bugs was left unfixed.
 * Any bug reports can be sent to hampusjojo@gmail.com for review.
-* See future bug fixes in future patch notes
 
 # Validation | [top](#Responsivness)
 
@@ -147,13 +145,15 @@
 ## New implementations
  - Added function to create targets based on screen size
  - Better sized targets
+ - Phones have smaller sized targets, this to fit some more targets and make it more scaleable for smaller screens
  - Buttons have feedback for user and shuts off depending on if game is started or not
  - Added timer
 
 ## Future Implemetations
  - Add possibility for the user to select number of targets
  - Add possibility to select how long targets appear
- - Scoreboard
+ - Scoreboard to keep track of who has gotten the best score.
+ - Regional scoreboard to keep track of score in your closer proximity
 
 ## New UI
  - Buttons has gotten a touch up. Added JS to disable and change classes depending on game state.
@@ -168,4 +168,6 @@
 ## Bugfixes / User Concern Fixes [top](#Responsivness)
  - Before players could start several games at once, this has been resolved.
  - No feedback for user, solved by adding timer and alerts after each game.
- - See future bug fixes in future patch notes
+ - Game ended too early, increased round time by 300ms
+ - stopGame(); sometimes ran it sequence twice, now controlled by an if statement.
+ - Container not fiting on some sizes, solved by adding more variants of number of targets.

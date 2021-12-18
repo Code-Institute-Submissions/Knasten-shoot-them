@@ -144,7 +144,7 @@ function startUnMask(func, interval) {
  */
 function startSetInterval() {
     if (gameStarted != true){
-        alert('Score points by hiting the red targets as they appear! You got 60 seconds.');
+        alert('Score points by hiting the red targets as they appear! You got 60 seconds. And for each target you hit the time they are visible decreases!');
         startUnMask(unMask, 1000);
         document.getElementById("score").innerHTML = 0;
         disableEnableStartBtn(); // Make sure this is called before setting gameStarted to true

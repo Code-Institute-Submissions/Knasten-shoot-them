@@ -33,10 +33,15 @@ footer {
     z-index: -100;
 }
 
+#footer-link {
+    position: relative;
+    top: 20px;
+    left: 13px;
+    color: rgb(79, 8, 185);
+}
+
 a {
     font-size: 360%;
-    display: inline-block;
-    width: 33%;
 }
 
 p {
